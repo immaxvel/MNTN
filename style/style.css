@@ -1,0 +1,349 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+a {
+  text-decoration: none;
+  color: white; }
+
+@font-face {
+  font-family: "Chronicle Display Roman";
+  font-style: normal;
+  font-weight: normal;
+  src: url(../fonts/Chronicle\ Display\ Roman.woff); }
+@font-face {
+  font-family: "Chronicle Display Semibold";
+  font-style: normal;
+  font-weight: normal;
+  src: url(../fonts/Chronicle\ Display\ Semibold.woff); }
+@font-face {
+  font-family: "Gilroy";
+  src: url("Gilroy-Bold.eot");
+  src: local("Gilroy Bold"), local("Gilroy-Bold"), url("Gilroy-Bold.eot?#iefix") format("embedded-opentype"), url("Gilroy-Bold.woff2") format("woff2"), url("Gilroy-Bold.woff") format("woff"), url("Gilroy-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal; }
+@font-face {
+  font-family: "Gilroy";
+  src: url("Gilroy-Regular.eot");
+  src: local("Gilroy Regular"), local("Gilroy-Regular"), url("Gilroy-Regular.eot?#iefix") format("embedded-opentype"), url("Gilroy-Regular.woff2") format("woff2"), url("Gilroy-Regular.woff") format("woff"), url("Gilroy-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+html {
+  font-size: 10px;
+  font-family: Gilroy;
+  line-height: 22px; }
+
+body {
+  height: 460rem;
+  background: url(../img/botshadow.png) no-repeat 0 115rem, url(../img/human.png) no-repeat 0 70rem, url(../img/mountain.png) no-repeat 0 40rem, url(../img/topshadow.png) no-repeat 0 0, url(../img/clouds.png) no-repeat 0 -40rem, #0b1d26; }
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 6.4rem 8rem 0 8rem;
+  color: white; }
+  header .logo {
+    font-family: "Chronicle Display Semibold";
+    font-size: 3.2rem;
+    line-height: 3.8rem;
+    letter-spacing: 0.01em; }
+  header .nav {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center; }
+    header .nav li {
+      list-style-type: none;
+      margin-right: 4rem;
+      font-family: Gilroy;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 18px;
+      line-height: 22px; }
+  header .profile {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 9.8rem;
+    align-items: center; }
+    header .profile .account {
+      font-family: Gilroy;
+      font-size: 17px;
+      line-height: 21px;
+      font-weight: bold; }
+    header .profile .fa-user-circle {
+      font-size: 2rem; }
+
+main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 13.8rem 8rem 0 8rem; }
+  main .social {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 17.3rem;
+    width: 2.4rem;
+    color: white;
+    text-align: center;
+    margin-left: -3rem;
+    align-self: center; }
+    main .social .follow {
+      transform: rotate(90deg);
+      font-size: 18px;
+      line-height: 22px;
+      margin-right: 2rem;
+      width: 8rem; }
+    main .social .social-icons {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between; }
+      main .social .social-icons i {
+        font-size: 2rem;
+        margin-left: 3rem;
+        margin-top: 2rem; }
+  main .slider {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 18px;
+    margin-top: -1rem;
+    width: 7.7rem;
+    text-align: center;
+    align-self: center; }
+    main .slider div {
+      height: 6rem;
+      border-right: 1px solid white;
+      color: white; }
+      main .slider div a {
+        text-decoration: none;
+        color: white; }
+    main .slider .start {
+      border-right: 4px solid white;
+      text-align: start; }
+  main .main {
+    color: white; }
+    main .main .main-title {
+      display: flex;
+      flex-direction: row;
+      justify-content: start; }
+    main .main .title {
+      font-weight: 600;
+      font-size: 88px;
+      line-height: 100px;
+      margin-bottom: 4rem;
+      margin-top: 3.2rem; }
+    main .main .dash {
+      background-color: #fbd784;
+      width: 7.2rem;
+      height: 0.2rem;
+      align-self: center;
+      margin-right: 3.2rem; }
+    main .main .guide {
+      color: #fbd784;
+      font-weight: 800;
+      font-size: 18px;
+      line-height: 22px;
+      letter-spacing: 6px; }
+    main .main .scroll {
+      display: flex;
+      flex-direction: row;
+      font-size: 18px; }
+      main .main .scroll a {
+        margin-right: 2rem; }
+
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: 80rem auto;
+  width: 146.2rem; }
+  .container .topic-one {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 20rem; }
+    .container .topic-one .topic-one-text {
+      position: relative;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      width: 89.6rem;
+      height: 72rem;
+      order: 1; }
+      .container .topic-one .topic-one-text .number {
+        position: absolute;
+        top: 3.8rem;
+        left: 0;
+        font-weight: bold;
+        font-size: 240px;
+        line-height: 240px;
+        opacity: 0.1;
+        color: #ffffff; }
+      .container .topic-one .topic-one-text .topic {
+        width: 63.2rem;
+        height: 43.9rem;
+        color: white; }
+        .container .topic-one .topic-one-text .topic .topic-title {
+          display: flex;
+          flex-direction: row;
+          justify-content: start;
+          margin-bottom: 2.7rem; }
+          .container .topic-one .topic-one-text .topic .topic-title .dash {
+            background-color: #fbd784;
+            width: 7.2rem;
+            height: 0.2rem;
+            align-self: center;
+            margin-right: 3.2rem; }
+          .container .topic-one .topic-one-text .topic .topic-title .get-started {
+            font-weight: 800;
+            font-size: 18px;
+            line-height: 22px;
+            letter-spacing: 6px;
+            color: #fbd784; }
+        .container .topic-one .topic-one-text .topic .topic-main {
+          font-family: "Chronicle Display Semibold";
+          font-style: normal;
+          font-weight: 600;
+          font-size: 64px;
+          line-height: 77px;
+          color: #ffffff;
+          margin-bottom: 2.7rem; }
+        .container .topic-one .topic-one-text .topic .topic-info {
+          font-family: Gilroy;
+          font-style: normal;
+          font-weight: bold;
+          font-size: 18px;
+          line-height: 32px;
+          margin-bottom: 2.7rem; }
+        .container .topic-one .topic-one-text .topic .read-more {
+          display: flex;
+          flex-direction: row;
+          color: #fbd784;
+          align-items: center;
+          margin-right: 1rem;
+          margin-top: 2.8rem; }
+          .container .topic-one .topic-one-text .topic .read-more p {
+            font-family: Gilroy;
+            font-size: 18px;
+            line-height: 22px;
+            margin-right: 1.6rem; }
+    .container .topic-one .topic-one-image {
+      order: 2; }
+  .container .topic-two {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 20rem; }
+    .container .topic-two .topic-two-text {
+      position: relative;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      width: 89.6rem;
+      height: 72rem;
+      order: 2; }
+      .container .topic-two .topic-two-text .number-two {
+        position: absolute;
+        top: 3.8rem;
+        left: 0;
+        font-weight: bold;
+        font-size: 240px;
+        line-height: 240px;
+        opacity: 0.1;
+        color: #ffffff; }
+      .container .topic-two .topic-two-text .topic {
+        width: 63.2rem;
+        height: 43.9rem;
+        color: white; }
+        .container .topic-two .topic-two-text .topic .topic-title-two {
+          display: flex;
+          flex-direction: row;
+          justify-content: start;
+          margin-bottom: 2.7rem; }
+          .container .topic-two .topic-two-text .topic .topic-title-two .dash-two {
+            background-color: #fbd784;
+            width: 7.2rem;
+            height: 0.2rem;
+            align-self: center;
+            margin-right: 3.2rem; }
+          .container .topic-two .topic-two-text .topic .topic-title-two .get-started-two {
+            font-weight: 800;
+            font-size: 18px;
+            line-height: 22px;
+            letter-spacing: 6px;
+            color: #fbd784; }
+        .container .topic-two .topic-two-text .topic .topic-main-two {
+          font-family: "Chronicle Display Semibold";
+          font-style: normal;
+          font-weight: 600;
+          font-size: 64px;
+          line-height: 77px;
+          color: #ffffff;
+          margin-bottom: 2.7rem; }
+        .container .topic-two .topic-two-text .topic .topic-info-two {
+          font-family: Gilroy;
+          font-style: normal;
+          font-weight: bold;
+          font-size: 18px;
+          line-height: 32px;
+          margin-bottom: 2.7rem; }
+        .container .topic-two .topic-two-text .topic .read-more-two {
+          display: flex;
+          flex-direction: row;
+          color: #fbd784;
+          align-items: center;
+          margin-right: 1rem;
+          margin-top: 2.8rem; }
+          .container .topic-two .topic-two-text .topic .read-more-two p {
+            font-family: Gilroy;
+            font-size: 18px;
+            line-height: 22px;
+            margin-right: 1.6rem; }
+    .container .topic-two .topic-two-image {
+      order: 1; }
+  .container footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: white; }
+    .container footer .footer-title {
+      font-family: "Chronicle Display Semibold";
+      font-size: 32px;
+      line-height: 38px;
+      letter-spacing: 0.01em;
+      margin-bottom: 2.4rem;
+      text-decoration: none; }
+    .container footer .footer-info {
+      font-weight: bold;
+      font-size: 18px;
+      line-height: 32px;
+      margin-bottom: 16.2rem; }
+    .container footer .footer-copyright {
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 32px;
+      opacity: 0.5; }
+    .container footer .links {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between; }
+      .container footer .links .blog {
+        margin-right: 21.2rem; }
+      .container footer .links ul {
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 32px;
+        color: #fbd784; }
+        .container footer .links ul li {
+          color: white;
+          list-style-type: none;
+          margin-top: 1.6rem; }
+        .container footer .links ul li:first-child {
+          margin-top: 5.6rem; }
+
+/*# sourceMappingURL=style.css.map */
