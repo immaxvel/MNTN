@@ -22,7 +22,7 @@ anchors.forEach(function(item) {
       if(scrollBy > window.pageYOffset - coordY && window.innerHeight + window.pageYOffset < document.body.offsetHeight) {
         // то скроллим на к-во пикселей, которое соответствует одному такту
         window.scrollBy(0, scrollBy);
-      } else {
+      } else{
         // иначе добираемся до элемента и выходим из интервала
         window.scrollTo(0, coordY);
         clearInterval(scroller);
@@ -32,3 +32,20 @@ anchors.forEach(function(item) {
   });
 });
 
+window.onscroll = function() {
+  var scrollElem = document.getElementById("scrollToTop");
+  if (document.body.scrollTop > document.documentElement.clientHeight) {
+     scrollElem.style.opacity = "1";
+  } else {
+      scrollElem.style.opacity = "1";
+  }
+}
+
+var timeOut;
+function goUp() {
+   var top = Math.max(document.body.scrollTop,document.documentElement.scrollTop);
+   if(top > 0) {
+      window.scrollBy(0,-100);
+      timeOut = setTimeout('goUp()',20);
+   }else clearTimeout(timeOut);
+}
