@@ -2,11 +2,16 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-a{
+  a {
     text-decoration: none;
-    color:white;
+    color: white;
+  }
+  a:hover {
+    color: #fbd784;
+    transition: 0.5s;
+  }
 }
+
 @font-face {
   font-family: "Chronicle Display Roman";
   font-style: normal;
@@ -55,7 +60,29 @@ body {
     url(../img/topshadow.png) no-repeat 0 0,
     url(../img/clouds.png) no-repeat 0 -40rem, #0b1d26;
 }
+.slider {
+  div:hover {
+    color: #fbd784;
+    transition: 0.5s;
+    background-color: rgba(255, 255, 255, 0.151);
+    transition: 0.5s;
+    border-right: 4px solid white;
+    transition: 0.1s;
+  }
+}
+.profile:hover,
+.scroll:hover {
+  color: #fbd784;
+  transition: 0.5s;
+  cursor: pointer;
+}
 
+.read-more p:hover,
+.read-more-two p:hover {
+  color: white;
+  transition: 0.5s;
+  cursor: pointer;
+}
 header {
   display: flex;
   flex-direction: row;
@@ -147,14 +174,10 @@ main {
       height: 6rem;
       border-right: 1px solid white;
       color: white;
-      a{
-          text-decoration: none;
-          color: white;
+      a {
+        text-decoration: none;
+        color: white;
       }
-    }
-    .start {
-      border-right: 4px solid white;
-      text-align: start;
     }
   }
   .main {
@@ -413,11 +436,17 @@ main {
           color: white;
           list-style-type: none;
           margin-top: 1.6rem;
+          
         }
-        li:first-child {
+        li:hover {
+            color: #fbd784;
+            transition: 0.5s;
+            cursor: pointer;
+          }
+        li a:first-child {
           margin-top: 5.6rem;
         }
-      }
     }
   }
+}
 }

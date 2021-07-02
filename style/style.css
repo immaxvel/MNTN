@@ -2,10 +2,12 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box; }
-
-a {
-  text-decoration: none;
-  color: white; }
+  * a {
+    text-decoration: none;
+    color: white; }
+  * a:hover {
+    color: #fbd784;
+    transition: 0.5s; }
 
 @font-face {
   font-family: "Chronicle Display Roman";
@@ -37,6 +39,26 @@ html {
 body {
   height: 460rem;
   background: url(../img/botshadow.png) no-repeat 0 115rem, url(../img/human.png) no-repeat 0 70rem, url(../img/mountain.png) no-repeat 0 40rem, url(../img/topshadow.png) no-repeat 0 0, url(../img/clouds.png) no-repeat 0 -40rem, #0b1d26; }
+
+.slider div:hover {
+  color: #fbd784;
+  transition: 0.5s;
+  background-color: rgba(255, 255, 255, 0.151);
+  transition: 0.5s;
+  border-right: 4px solid white;
+  transition: 0.1s; }
+
+.profile:hover,
+.scroll:hover {
+  color: #fbd784;
+  transition: 0.5s;
+  cursor: pointer; }
+
+.read-more p:hover,
+.read-more-two p:hover {
+  color: white;
+  transition: 0.5s;
+  cursor: pointer; }
 
 header {
   display: flex;
@@ -121,9 +143,6 @@ main {
       main .slider div a {
         text-decoration: none;
         color: white; }
-    main .slider .start {
-      border-right: 4px solid white;
-      text-align: start; }
   main .main {
     color: white; }
     main .main .main-title {
@@ -343,7 +362,11 @@ main {
           color: white;
           list-style-type: none;
           margin-top: 1.6rem; }
-        .container footer .links ul li:first-child {
+        .container footer .links ul li:hover {
+          color: #fbd784;
+          transition: 0.5s;
+          cursor: pointer; }
+        .container footer .links ul li a:first-child {
           margin-top: 5.6rem; }
 
 /*# sourceMappingURL=style.css.map */
