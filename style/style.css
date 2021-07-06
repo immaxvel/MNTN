@@ -37,19 +37,10 @@ html {
   line-height: 22px; }
 
 body {
-  height: 460rem;
+  height: 446rem;
   background: url(../img/botshadow.png) no-repeat 0 115rem, url(../img/human.png) no-repeat 0 70rem, url(../img/mountain.png) no-repeat 0 40rem, url(../img/topshadow.png) no-repeat 0 0, url(../img/clouds.png) no-repeat 0 -40rem, #0b1d26; }
 
-.slider div:hover {
-  color: #fbd784;
-  transition: 0.5s;
-  background-color: rgba(255, 255, 255, 0.151);
-  transition: 0.5s;
-  border-right: 4px solid white;
-  transition: 0.1s; }
-
-.profile:hover,
-.scroll:hover {
+.profile:hover {
   color: #fbd784;
   transition: 0.5s;
   cursor: pointer; }
@@ -139,10 +130,19 @@ main {
     main .slider div {
       height: 6rem;
       border-right: 1px solid white;
-      color: white; }
+      color: white;
+      padding-top: 25%;
+      transition: 0.5s; }
       main .slider div a {
         text-decoration: none;
         color: white; }
+    main .slider div:hover {
+      color: #fbd784;
+      transition: 0.5s;
+      background-color: rgba(255, 255, 255, 0.151);
+      transition: 0.5s;
+      border-right: 4px solid white;
+      transition: 0.1s; }
   main .main {
     color: white; }
     main .main .main-title {
@@ -170,9 +170,19 @@ main {
     main .main .scroll {
       display: flex;
       flex-direction: row;
-      font-size: 18px; }
+      font-size: 18px;
+      width: 15rem;
+      height: 2rem;
+      background-color: #fbd784;
+      border-radius: 2rem;
+      padding-left: 2rem;
+      cursor: pointer; }
       main .main .scroll a {
-        margin-right: 2rem; }
+        margin-right: 2rem;
+        color: white; }
+      main .main .scroll i {
+        align-self: center;
+        font-size: 1.7rem; }
 
 .container {
   display: flex;
@@ -190,7 +200,6 @@ main {
       flex-direction: row;
       justify-content: center;
       align-items: center;
-      width: 89.6rem;
       height: 72rem;
       order: 1; }
       .container .topic-one .topic-one-text .number {
@@ -251,7 +260,8 @@ main {
             line-height: 22px;
             margin-right: 1.6rem; }
     .container .topic-one .topic-one-image {
-      order: 2; }
+      order: 2;
+      align-self: center; }
   .container .topic-two {
     display: flex;
     flex-direction: row;
@@ -324,12 +334,24 @@ main {
             line-height: 22px;
             margin-right: 1.6rem; }
     .container .topic-two .topic-two-image {
-      order: 1; }
+      order: 1;
+      align-self: center; }
   .container footer {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     color: white; }
+    .container footer .footer-social {
+      display: none;
+      justify-content: start;
+      flex-direction: row; }
+      .container footer .footer-social p {
+        font-size: 2rem;
+        padding-bottom: 2rem;
+        margin-right: 1rem; }
+      .container footer .footer-social i {
+        font-size: 2rem;
+        margin-right: 1rem; }
     .container footer .footer-title {
       font-family: "Chronicle Display Semibold";
       font-size: 32px;
@@ -341,7 +363,7 @@ main {
       font-weight: bold;
       font-size: 18px;
       line-height: 32px;
-      margin-bottom: 16.2rem; }
+      margin-bottom: 7.2rem; }
     .container footer .footer-copyright {
       font-weight: 500;
       font-size: 18px;
@@ -374,7 +396,7 @@ main {
   justify-content: center;
   position: fixed;
   bottom: 2rem;
-  right: 2rem;
+  right: 6rem;
   font-weight: bold;
   cursor: pointer;
   opacity: 0;
@@ -384,11 +406,260 @@ main {
   color: white;
   background-color: #fff;
   border-radius: 50%; }
-  #scrollToTop .fa-arrow-up {
+  #scrollToTop .fa-long-arrow-alt-up {
     align-self: center;
     color: #fbd784;
     text-align: center;
-    opacity: 1;
-    font-size: 4rem; }
+    font-size: 3rem; }
+
+@media all and (max-width: 1680px) {
+  .topic-two-image img,
+  .topic-one-image img,
+  .topic-three-image img {
+    height: 50rem; }
+
+  .container footer {
+    justify-content: space-evenly; } }
+@media all and (max-width: 1500px) {
+  main .main .title {
+    font-size: 50px;
+    line-height: 50px;
+    margin-bottom: 2rem;
+    margin-top: 1.2rem; }
+
+  .container {
+    width: 100%; }
+
+  .container .topic-one,
+  .container .topic-two {
+    flex-direction: column; }
+
+  .topic-one-text,
+  .topic-two-text {
+    align-self: center;
+    height: 0; }
+
+  .container .topic-two .topic-two-image {
+    order: 2; }
+
+  .container .topic-two .topic-two-text {
+    order: 1; }
+
+  .container footer .links {
+    font-size: 2rem; }
+
+  .container .topic-one {
+    margin-bottom: 4rem; }
+    .container .topic-one .topic-one-text {
+      height: 53rem; }
+      .container .topic-one .topic-one-text .number {
+        font-size: 140px; }
+      .container .topic-one .topic-one-text .topic .topic-main {
+        font-size: 50px; }
+
+  .container .topic-two {
+    margin-bottom: 4rem; }
+    .container .topic-two .topic-two-text {
+      height: 53rem; }
+      .container .topic-two .topic-two-text .number-two {
+        font-size: 140px; }
+      .container .topic-two .topic-two-text .topic .topic-main-two {
+        font-size: 50px; }
+
+  footer {
+    margin-bottom: 5rem;
+    margin-top: 5rem; } }
+@media all and (max-width: 1200px) {
+  .container footer .links ul li {
+    font-size: 18px; }
+
+  .container footer {
+    flex-direction: column; }
+
+  .container footer .footer-social {
+    display: flex; }
+
+  .container footer .footer-info {
+    margin-bottom: 3.2rem; }
+
+  .footer-left-side {
+    order: 2;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    margin-top: 10rem;
+    margin-bottom: 3rem;
+    align-items: center; }
+
+  .container footer .links {
+    order: 1;
+    justify-content: space-around;
+    margin-top: 4rem; }
+    .container footer .links .blog {
+      margin-right: 5.2rem; }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 13.8rem 8rem 0 8rem;
+    align-items: center; }
+    main .social {
+      display: none; }
+    main .slider {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      font-size: 18px;
+      margin-top: 4rem;
+      width: 23.7rem;
+      text-align: center;
+      align-self: center; }
+      main .slider .start,
+      main .slider .title-one,
+      main .slider .title-two,
+      main .slider .title-three {
+        width: 5rem;
+        border-bottom: 2px solid white;
+        border-right: none;
+        height: 4rem;
+        padding-top: 10%; }
+      main .slider div:hover {
+        color: #fbd784;
+        transition: 0.5s;
+        background-color: rgba(255, 255, 255, 0.151);
+        transition: 0.5s;
+        border-right: none;
+        transition: 0.1s;
+        border-bottom: 4px solid white; } }
+@media all and (max-width: 940px) {
+  main {
+    margin: 13.8rem 2rem 0 2rem;
+    text-align: center; }
+
+  main .main .scroll {
+    margin: 0 auto; }
+
+  .fa-user-circle:before {
+    font-size: 2.5rem; }
+
+  .container .topic-one .topic-one-text {
+    width: none; }
+
+  .container .topic-one .topic-one-text .topic {
+    width: 39rem;
+    margin-bottom: 20rem; }
+
+  .container .topic-two {
+    margin-bottom: 12rem; }
+    .container .topic-two .topic-two-text {
+      width: 39rem;
+      margin-bottom: 10rem; }
+
+  .container .topic-one .topic-one-text .number {
+    top: -10rem; }
+
+  .container .topic-two .topic-two-text .number-two {
+    top: 1rem; }
+
+  header {
+    justify-content: center; }
+    header .nav {
+      margin-left: 16rem;
+      flex-direction: column;
+      align-items: flex-start; }
+    header .profile {
+      align-items: flex-start;
+      width: 3rem; }
+      header .profile .account {
+        display: none; }
+
+  #scrollToTop {
+    right: 3rem;
+    bottom: 6rem; }
+
+  body {
+    height: 446rem;
+    background: url(../img/botshadow.png) no-repeat 0 115rem, url(../img/human.png) no-repeat -30rem 70rem, url(../img/mountain.png) no-repeat 0 40rem, url(../img/topshadow.png) no-repeat 0 0, url(../img/clouds.png) no-repeat 0 -40rem, #0b1d26; } }
+@media all and (max-width: 475px) {
+  main .main .title {
+    font-size: 30px; }
+
+  main .main .main-title .dash {
+    width: 4rem; }
+  main .main .main-title p {
+    font-size: 15px; }
+
+  header .logo {
+    font-size: 20px; }
+  header .nav li {
+    font-size: 15px; }
+
+  .container .topic-two .topic-two-text {
+    margin-bottom: -5rem; }
+    .container .topic-two .topic-two-text .topic .topic-main-two {
+      font-size: 30px; }
+    .container .topic-two .topic-two-text .topic .topic-info-two {
+      font-size: 15px; }
+
+  .container .topic-one .topic-one-text .topic .topic-main {
+    font-size: 30px; }
+  .container .topic-one .topic-one-text .topic .topic-info {
+    font-size: 15px; }
+
+  .container .topic-one .topic-one-text .number {
+    top: 0; }
+
+  .container .topic-one .topic-one-text .topic {
+    margin-bottom: 2rem; }
+
+  .topic-two-image img,
+  .topic-one-image img,
+  .topic-three-image img {
+    height: 35rem; } }
+@media all and (max-width: 475px) {
+  .topic-one-image img,
+  .topic-three-image img {
+    margin-top: 10rem; }
+
+  .topic-two-image img {
+    margin-top: 14rem; }
+
+  .container .topic-one .topic-one-text {
+    width: 28rem; }
+
+  .container .topic-two .topic-two-text {
+    width: 28rem; }
+
+  .container footer .links {
+    flex-direction: column;
+    align-self: center; }
+    .container footer .links .blog {
+      order: 1;
+      margin-bottom: 4rem;
+      text-align: center;
+      margin-right: 0;
+      font-size: 20px; }
+      .container footer .links .blog li {
+        font-size: 15px; }
+    .container footer .links .more {
+      order: 2;
+      text-align: center;
+      font-size: 20px; }
+      .container footer .links .more li {
+        font-size: 15px; }
+
+  header {
+    justify-content: space-evenly; }
+    header .nav {
+      margin-left: 6rem; }
+
+  body {
+    height: 446rem;
+    background: url(../img/botshadow.png) no-repeat 0 115rem, url(../img/human.png) no-repeat -40rem 70rem, url(../img/mountain.png) no-repeat 0 40rem, url(../img/topshadow.png) no-repeat 0 0, url(../img/clouds.png) no-repeat 0 -40rem, #0b1d26; }
+
+  #scrollToTop {
+    right: 1rem;
+    bottom: 12rem; } }
 
 /*# sourceMappingURL=style.css.map */
