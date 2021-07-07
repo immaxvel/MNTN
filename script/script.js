@@ -19,24 +19,24 @@ anchors.forEach((item) => {
       // how much scroll for one tact
       const scrollBy = coordY / framesCount;
 
-      // если к-во пикселей для скролла за 1 такт больше расстояния до элемента
-      // и дно страницы не достигнуто
+      // if px scroll for 1 tact > length to element 
+      // and bottom do not reached
       if (
         scrollBy > window.pageYOffset - coordY &&
         window.innerHeight + window.pageYOffset < document.body.offsetHeight
       ) {
-        // то скроллим на к-во пикселей, которое соответствует одному такту
+        // then scroll to px = 1tact
         window.scrollBy(0, scrollBy);
       } else {
-        // иначе добираемся до элемента и выходим из интервала
+        // else reached to elem and go out from interval
         window.scrollTo(0, coordY);
         clearInterval(scroller);
       }
-      // время интервала равняется частному от времени анимации и к-ва кадров
+      //time of interval 
     }, animationTime / framesCount);
   });
 });
-
+//hide button arrow up when top is reached
 window.addEventListener("scroll", () => {
   let scrollElem = document.getElementById("scrollToTop");
   if (pageYOffset > document.documentElement.clientHeight) {
@@ -45,7 +45,7 @@ window.addEventListener("scroll", () => {
     scrollElem.style.opacity = "0";
   }
 });
-
+//scroll to top of page
 let timeOut;
 let goUp = () => {
   let top = Math.max(
