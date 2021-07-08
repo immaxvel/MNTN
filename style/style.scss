@@ -475,28 +475,28 @@ main {
         }
       }
     }
-  }
-}
-#scrollToTop {
-  display: flex;
-  justify-content: center;
-  position: fixed;
-  bottom: 2rem;
-  right: 6rem;
-  font-weight: bold;
-  cursor: pointer;
-  opacity: 0;
-  transition: all 0.5s ease-in;
-  width: 5rem;
-  height: 5rem;
-  color: white;
-  background-color: #fff;
-  border-radius: 50%;
-  .fa-long-arrow-alt-up {
-    align-self: center;
-    color: #fbd784;
-    text-align: center;
-    font-size: 3rem;
+    #scrollToTop {
+      display: flex;
+      justify-content: center;
+      position: fixed;
+      bottom: 2rem;
+      right: 6rem;
+      font-weight: bold;
+      cursor: pointer;
+      opacity: 0;
+      transition: all 0.5s ease-in;
+      width: 5rem;
+      height: 5rem;
+      color: white;
+      background-color: #fff;
+      border-radius: 50%;
+      .fa-long-arrow-alt-up {
+        align-self: center;
+        color: #fbd784;
+        text-align: center;
+        font-size: 3rem;
+      }
+    }
   }
 }
 
@@ -721,7 +721,6 @@ main {
       url(../img/clouds.png) no-repeat 0 -40rem, #0b1d26;
   }
 
-
   header {
     justify-content: space-evenly;
     .logo {
@@ -791,7 +790,7 @@ main {
         }
       }
     }
-    footer{
+    footer {
       .links {
         flex-direction: column;
         align-self: center;
@@ -819,6 +818,5 @@ main {
         bottom: 12rem;
       }
     }
-    
   }
 }
