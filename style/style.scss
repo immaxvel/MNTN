@@ -500,17 +500,15 @@ main {
   }
 }
 
-
-
 //media requests
 @media all and (max-width: 1680px) {
+  .container footer {
+    justify-content: space-evenly;
+  }
   .topic-two-image img,
   .topic-one-image img,
   .topic-three-image img {
     height: 50rem;
-  }
-  .container footer {
-    justify-content: space-evenly;
   }
 }
 
@@ -523,91 +521,88 @@ main {
   }
   .container {
     width: 100%;
-  }
-  .container .topic-one,
-  .container .topic-two {
-    flex-direction: column;
-  }
-  .topic-one-text,
-  .topic-two-text {
-    align-self: center;
-    height: 0;
-  }
-  .container .topic-two .topic-two-image {
-    order: 2;
-  }
-  .container .topic-two .topic-two-text {
-    order: 1;
-  }
-
-  .container footer .links {
-    font-size: 2rem;
-  }
-
-  .container .topic-one {
-    margin-bottom: 4rem;
-    .topic-one-text {
-      height: 53rem;
-      .number {
-        font-size: 140px;
-      }
-      .topic {
-        .topic-main {
-          font-size: 50px;
+    .topic-one {
+      flex-direction: column;
+      margin-bottom: 4rem;
+      .topic-one-text {
+        align-self: center;
+        height: 0;
+        height: 53rem;
+        .number {
+          font-size: 140px;
+        }
+        .topic {
+          .topic-main {
+            font-size: 50px;
+          }
         }
       }
     }
-  }
-  .container .topic-two {
-    margin-bottom: 4rem;
-    .topic-two-text {
-      height: 53rem;
-      .number-two {
-        font-size: 140px;
+    .topic-two {
+      flex-direction: column;
+      margin-bottom: 4rem;
+      .topic-two-image {
+        order: 2;
       }
-      .topic {
-        .topic-main-two {
-          font-size: 50px;
+      .topic-two-text {
+        align-self: center;
+        height: 53rem;
+        order: 1;
+        .number-two {
+          left: 13rem;
+          font-size: 140px;
+        }
+        .topic {
+          .topic-main-two {
+            font-size: 50px;
+          }
         }
       }
     }
-  }
-  footer{
-    margin-bottom: 5rem;
-    margin-top: 5rem;
+    footer {
+      margin-bottom: 5rem;
+      margin-top: 5rem;
+      .links {
+        font-size: 2rem;
+      }
+    }
   }
 }
 
 @media all and (max-width: 1200px) {
-  .container footer .links ul li {
-    font-size: 18px;
-  }
-  .container footer {
-    flex-direction: column;
-  }
-  .container footer .footer-social {
-    display: flex;
-  }
-  .container footer .footer-info {
-    margin-bottom: 3.2rem;
-  }
-  .footer-left-side {
-    order: 2;
-    display: flex;
-    flex-direction: column;
-    align-self: center;
-    margin-top: 10rem;
-    margin-bottom: 3rem;
-    align-items: center;
-  }
-  .container footer .links {
-    order: 1;
-    justify-content: space-around;
-    margin-top: 4rem;
-    .blog {
-      margin-right: 5.2rem;
+  .container {
+    footer {
+      flex-direction: column;
+      .footer-left-side {
+        order: 2;
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+        margin-top: 10rem;
+        margin-bottom: 3rem;
+        align-items: center;
+        .footer-info {
+          margin-bottom: 3.2rem;
+        }
+        .footer-social {
+          display: flex;
+        }
+      }
+
+      .links {
+        order: 1;
+        justify-content: space-around;
+        margin-top: 4rem;
+        .blog {
+          margin-right: 5.2rem;
+          li {
+            font-size: 18px;
+          }
+        }
+      }
     }
   }
+
   main {
     display: flex;
     flex-direction: column;
@@ -649,44 +644,15 @@ main {
   }
 }
 @media all and (max-width: 940px) {
-  main {
-    margin: 13.8rem 2rem 0 2rem;
-    text-align: center;
+  body {
+    height: 446rem;
+    background: url(../img/botshadow.png) no-repeat 0 115rem,
+      url(../img/human.png) no-repeat -30rem 70rem,
+      url(../img/mountain.png) no-repeat 0 40rem,
+      url(../img/topshadow.png) no-repeat 0 0,
+      url(../img/clouds.png) no-repeat 0 -40rem, #0b1d26;
   }
 
-  main .main .scroll {
-    margin: 0 auto;
-  }
-  .fa-user-circle:before {
-    font-size: 2.5rem;
-  }
-  .container .topic-one .topic-one-text {
-    width: none;
-  }
-  .container .topic-one .topic-one-text .topic {
-    width: 39rem;
-    margin-bottom: 20rem;
-  }
-  .container .topic-two {
-    margin-bottom: 12rem;
-    .topic-two-text {
-      width: 39rem;
-      margin-bottom: 10rem;
-    }
-  }
-
-  .container {
-    .topic-one {
-      .topic-one-text {
-        .number {
-          top: -10rem;
-        }
-      }
-    }
-  }
-  .container .topic-two .topic-two-text .number-two {
-    top: 1rem;
-  }
   header {
     justify-content: center;
     .nav {
@@ -700,117 +666,52 @@ main {
       .account {
         display: none;
       }
+      .fa-user-circle:before {
+        font-size: 2.5rem;
+      }
     }
   }
+
+  main {
+    margin: 13.8rem 2rem 0 2rem;
+    text-align: center;
+    .main .scroll {
+      margin: 0 auto;
+    }
+  }
+
+  .container {
+    .topic-one {
+      .topic-one-text {
+        width: none;
+        .number {
+          top: -10rem;
+        }
+        .topic {
+          width: 39rem;
+          margin-bottom: 20rem;
+        }
+      }
+    }
+    .topic-two {
+      margin-bottom: 12rem;
+      .topic-two-text {
+        width: 39rem;
+        margin-bottom: 10rem;
+        .number-two {
+          top: 1rem;
+        }
+      }
+    }
+  }
+
   #scrollToTop {
     right: 3rem;
     bottom: 6rem;
   }
-  body {
-    height: 446rem;
-    background: url(../img/botshadow.png) no-repeat 0 115rem,
-      url(../img/human.png) no-repeat -30rem 70rem,
-      url(../img/mountain.png) no-repeat 0 40rem,
-      url(../img/topshadow.png) no-repeat 0 0,
-      url(../img/clouds.png) no-repeat 0 -40rem, #0b1d26;
-  }
 }
-@media all and (max-width: 475px) {
-  main .main .title {
-    font-size: 30px;
-  }
-  main .main .main-title {
-    .dash {
-      width: 4rem;
-    }
-    p {
-      font-size: 15px;
-    }
-  }
-  header {
-    .logo {
-      font-size: 20px;
-    }
-    .nav {
-      li {
-        font-size: 15px;
-      }
-    }
-  }
-  .container .topic-two .topic-two-text {
-    margin-bottom: -5rem;
-    .topic {
-      .topic-main-two {
-        font-size: 30px;
-      }
-      .topic-info-two {
-        font-size: 15px;
-      }
-    }
-  }
-  .container .topic-one .topic-one-text .topic {
-    .topic-main {
-      font-size: 30px;
-    }
-    .topic-info {
-      font-size: 15px;
-    }
-  }
-  .container .topic-one .topic-one-text .number {
-    top: 0;
-  }
-  .container .topic-one .topic-one-text .topic {
-    margin-bottom: 2rem;
-  }
 
-  .topic-two-image img,
-  .topic-one-image img,
-  .topic-three-image img {
-    height: 35rem;
-  }
-}
 @media all and (max-width: 475px) {
-  .topic-one-image img,
-  .topic-three-image img {
-    margin-top: 10rem;
-  }
-  .topic-two-image img{
-    margin-top: 14rem;
-  }
-  .container .topic-one .topic-one-text {
-    width: 28rem;
-  }
-  .container .topic-two .topic-two-text{
-    width: 28rem;
-  }
-  .container footer .links {
-    flex-direction: column;
-    align-self: center;
-    .blog {
-      order: 1;
-      margin-bottom: 4rem;
-      text-align: center;
-      margin-right: 0;
-      font-size: 20px;
-      li{
-        font-size: 15px;
-      }
-    }
-    .more {
-      order: 2;
-      text-align: center;
-      font-size: 20px;
-      li{
-        font-size: 15px;
-      }
-    }
-  }
-  header{
-    justify-content: space-evenly;
-    .nav{
-      margin-left: 6rem;
-    }
-  }
   body {
     height: 446rem;
     background: url(../img/botshadow.png) no-repeat 0 115rem,
@@ -819,8 +720,105 @@ main {
       url(../img/topshadow.png) no-repeat 0 0,
       url(../img/clouds.png) no-repeat 0 -40rem, #0b1d26;
   }
-  #scrollToTop {
-    right: 1rem;
-    bottom: 12rem;
-}
+
+
+  header {
+    justify-content: space-evenly;
+    .logo {
+      font-size: 20px;
+    }
+    .nav {
+      margin-left: 6rem;
+      li {
+        font-size: 15px;
+      }
+    }
+  }
+
+  main .main {
+    .main-title {
+      .dash {
+        width: 4rem;
+      }
+      p {
+        font-size: 15px;
+      }
+    }
+    .title {
+      font-size: 30px;
+    }
+  }
+
+  .container {
+    .topic-two-image img,
+    .topic-one-image img,
+    .topic-three-image img {
+      height: 35rem;
+    }
+    .topic-one-image img,
+    .topic-three-image img {
+      margin-top: 10rem;
+    }
+    .topic-two-image img {
+      margin-top: 14rem;
+    }
+    .topic-one {
+      .topic-one-text {
+        width: 28rem;
+        .number {
+          top: 0;
+        }
+        .topic {
+          margin-bottom: 2rem;
+          .topic-main {
+            font-size: 30px;
+          }
+          .topic-info {
+            font-size: 15px;
+          }
+        }
+      }
+    }
+    .topic-two .topic-two-text {
+      margin-bottom: -5rem;
+      width: 28rem;
+      .topic {
+        .topic-main-two {
+          font-size: 30px;
+        }
+        .topic-info-two {
+          font-size: 15px;
+        }
+      }
+    }
+    footer{
+      .links {
+        flex-direction: column;
+        align-self: center;
+        .blog {
+          order: 1;
+          margin-bottom: 4rem;
+          text-align: center;
+          margin-right: 0;
+          font-size: 20px;
+          li {
+            font-size: 15px;
+          }
+        }
+        .more {
+          order: 2;
+          text-align: center;
+          font-size: 20px;
+          li {
+            font-size: 15px;
+          }
+        }
+      }
+      #scrollToTop {
+        right: 1rem;
+        bottom: 12rem;
+      }
+    }
+    
+  }
 }

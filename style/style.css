@@ -413,13 +413,13 @@ main {
     font-size: 3rem; }
 
 @media all and (max-width: 1680px) {
+  .container footer {
+    justify-content: space-evenly; }
+
   .topic-two-image img,
   .topic-one-image img,
   .topic-three-image img {
-    height: 50rem; }
-
-  .container footer {
-    justify-content: space-evenly; } }
+    height: 50rem; } }
 @media all and (max-width: 1500px) {
   main .main .title {
     font-size: 50px;
@@ -429,74 +429,59 @@ main {
 
   .container {
     width: 100%; }
-
-  .container .topic-one,
-  .container .topic-two {
-    flex-direction: column; }
-
-  .topic-one-text,
-  .topic-two-text {
-    align-self: center;
-    height: 0; }
-
-  .container .topic-two .topic-two-image {
-    order: 2; }
-
-  .container .topic-two .topic-two-text {
-    order: 1; }
-
-  .container footer .links {
-    font-size: 2rem; }
-
-  .container .topic-one {
-    margin-bottom: 4rem; }
-    .container .topic-one .topic-one-text {
-      height: 53rem; }
-      .container .topic-one .topic-one-text .number {
-        font-size: 140px; }
-      .container .topic-one .topic-one-text .topic .topic-main {
-        font-size: 50px; }
-
-  .container .topic-two {
-    margin-bottom: 4rem; }
-    .container .topic-two .topic-two-text {
-      height: 53rem; }
-      .container .topic-two .topic-two-text .number-two {
-        font-size: 140px; }
-      .container .topic-two .topic-two-text .topic .topic-main-two {
-        font-size: 50px; }
-
-  footer {
-    margin-bottom: 5rem;
-    margin-top: 5rem; } }
+    .container .topic-one {
+      flex-direction: column;
+      margin-bottom: 4rem; }
+      .container .topic-one .topic-one-text {
+        align-self: center;
+        height: 0;
+        height: 53rem; }
+        .container .topic-one .topic-one-text .number {
+          font-size: 140px; }
+        .container .topic-one .topic-one-text .topic .topic-main {
+          font-size: 50px; }
+    .container .topic-two {
+      flex-direction: column;
+      margin-bottom: 4rem; }
+      .container .topic-two .topic-two-image {
+        order: 2; }
+      .container .topic-two .topic-two-text {
+        align-self: center;
+        height: 53rem;
+        order: 1; }
+        .container .topic-two .topic-two-text .number-two {
+          left: 13rem;
+          font-size: 140px; }
+        .container .topic-two .topic-two-text .topic .topic-main-two {
+          font-size: 50px; }
+    .container footer {
+      margin-bottom: 5rem;
+      margin-top: 5rem; }
+      .container footer .links {
+        font-size: 2rem; } }
 @media all and (max-width: 1200px) {
-  .container footer .links ul li {
-    font-size: 18px; }
-
   .container footer {
     flex-direction: column; }
-
-  .container footer .footer-social {
-    display: flex; }
-
-  .container footer .footer-info {
-    margin-bottom: 3.2rem; }
-
-  .footer-left-side {
-    order: 2;
-    display: flex;
-    flex-direction: column;
-    align-self: center;
-    margin-top: 10rem;
-    margin-bottom: 3rem;
-    align-items: center; }
-
-  .container footer .links {
-    order: 1;
-    justify-content: space-around;
-    margin-top: 4rem; }
-    .container footer .links .blog {
-      margin-right: 5.2rem; }
+    .container footer .footer-left-side {
+      order: 2;
+      display: flex;
+      flex-direction: column;
+      align-self: center;
+      margin-top: 10rem;
+      margin-bottom: 3rem;
+      align-items: center; }
+      .container footer .footer-left-side .footer-info {
+        margin-bottom: 3.2rem; }
+      .container footer .footer-left-side .footer-social {
+        display: flex; }
+    .container footer .links {
+      order: 1;
+      justify-content: space-around;
+      margin-top: 4rem; }
+      .container footer .links .blog {
+        margin-right: 5.2rem; }
+        .container footer .links .blog li {
+          font-size: 18px; }
 
   main {
     display: flex;
@@ -533,34 +518,9 @@ main {
         transition: 0.1s;
         border-bottom: 4px solid white; } }
 @media all and (max-width: 940px) {
-  main {
-    margin: 13.8rem 2rem 0 2rem;
-    text-align: center; }
-
-  main .main .scroll {
-    margin: 0 auto; }
-
-  .fa-user-circle:before {
-    font-size: 2.5rem; }
-
-  .container .topic-one .topic-one-text {
-    width: none; }
-
-  .container .topic-one .topic-one-text .topic {
-    width: 39rem;
-    margin-bottom: 20rem; }
-
-  .container .topic-two {
-    margin-bottom: 12rem; }
-    .container .topic-two .topic-two-text {
-      width: 39rem;
-      margin-bottom: 10rem; }
-
-  .container .topic-one .topic-one-text .number {
-    top: -10rem; }
-
-  .container .topic-two .topic-two-text .number-two {
-    top: 1rem; }
+  body {
+    height: 446rem;
+    background: url(../img/botshadow.png) no-repeat 0 115rem, url(../img/human.png) no-repeat -30rem 70rem, url(../img/mountain.png) no-repeat 0 40rem, url(../img/topshadow.png) no-repeat 0 0, url(../img/clouds.png) no-repeat 0 -40rem, #0b1d26; }
 
   header {
     justify-content: center; }
@@ -573,64 +533,80 @@ main {
       width: 3rem; }
       header .profile .account {
         display: none; }
+      header .profile .fa-user-circle:before {
+        font-size: 2.5rem; }
+
+  main {
+    margin: 13.8rem 2rem 0 2rem;
+    text-align: center; }
+    main .main .scroll {
+      margin: 0 auto; }
+
+  .container .topic-one .topic-one-text {
+    width: none; }
+    .container .topic-one .topic-one-text .number {
+      top: -10rem; }
+    .container .topic-one .topic-one-text .topic {
+      width: 39rem;
+      margin-bottom: 20rem; }
+  .container .topic-two {
+    margin-bottom: 12rem; }
+    .container .topic-two .topic-two-text {
+      width: 39rem;
+      margin-bottom: 10rem; }
+      .container .topic-two .topic-two-text .number-two {
+        top: 1rem; }
 
   #scrollToTop {
     right: 3rem;
-    bottom: 6rem; }
-
+    bottom: 6rem; } }
+@media all and (max-width: 475px) {
   body {
     height: 446rem;
-    background: url(../img/botshadow.png) no-repeat 0 115rem, url(../img/human.png) no-repeat -30rem 70rem, url(../img/mountain.png) no-repeat 0 40rem, url(../img/topshadow.png) no-repeat 0 0, url(../img/clouds.png) no-repeat 0 -40rem, #0b1d26; } }
-@media all and (max-width: 475px) {
-  main .main .title {
-    font-size: 30px; }
+    background: url(../img/botshadow.png) no-repeat 0 115rem, url(../img/human.png) no-repeat -40rem 70rem, url(../img/mountain.png) no-repeat 0 40rem, url(../img/topshadow.png) no-repeat 0 0, url(../img/clouds.png) no-repeat 0 -40rem, #0b1d26; }
+
+  header {
+    justify-content: space-evenly; }
+    header .logo {
+      font-size: 20px; }
+    header .nav {
+      margin-left: 6rem; }
+      header .nav li {
+        font-size: 15px; }
 
   main .main .main-title .dash {
     width: 4rem; }
   main .main .main-title p {
     font-size: 15px; }
+  main .main .title {
+    font-size: 30px; }
 
-  header .logo {
-    font-size: 20px; }
-  header .nav li {
-    font-size: 15px; }
-
+  .container .topic-two-image img,
+  .container .topic-one-image img,
+  .container .topic-three-image img {
+    height: 35rem; }
+  .container .topic-one-image img,
+  .container .topic-three-image img {
+    margin-top: 10rem; }
+  .container .topic-two-image img {
+    margin-top: 14rem; }
+  .container .topic-one .topic-one-text {
+    width: 28rem; }
+    .container .topic-one .topic-one-text .number {
+      top: 0; }
+    .container .topic-one .topic-one-text .topic {
+      margin-bottom: 2rem; }
+      .container .topic-one .topic-one-text .topic .topic-main {
+        font-size: 30px; }
+      .container .topic-one .topic-one-text .topic .topic-info {
+        font-size: 15px; }
   .container .topic-two .topic-two-text {
-    margin-bottom: -5rem; }
+    margin-bottom: -5rem;
+    width: 28rem; }
     .container .topic-two .topic-two-text .topic .topic-main-two {
       font-size: 30px; }
     .container .topic-two .topic-two-text .topic .topic-info-two {
       font-size: 15px; }
-
-  .container .topic-one .topic-one-text .topic .topic-main {
-    font-size: 30px; }
-  .container .topic-one .topic-one-text .topic .topic-info {
-    font-size: 15px; }
-
-  .container .topic-one .topic-one-text .number {
-    top: 0; }
-
-  .container .topic-one .topic-one-text .topic {
-    margin-bottom: 2rem; }
-
-  .topic-two-image img,
-  .topic-one-image img,
-  .topic-three-image img {
-    height: 35rem; } }
-@media all and (max-width: 475px) {
-  .topic-one-image img,
-  .topic-three-image img {
-    margin-top: 10rem; }
-
-  .topic-two-image img {
-    margin-top: 14rem; }
-
-  .container .topic-one .topic-one-text {
-    width: 28rem; }
-
-  .container .topic-two .topic-two-text {
-    width: 28rem; }
-
   .container footer .links {
     flex-direction: column;
     align-self: center; }
@@ -648,17 +624,7 @@ main {
       font-size: 20px; }
       .container footer .links .more li {
         font-size: 15px; }
-
-  header {
-    justify-content: space-evenly; }
-    header .nav {
-      margin-left: 6rem; }
-
-  body {
-    height: 446rem;
-    background: url(../img/botshadow.png) no-repeat 0 115rem, url(../img/human.png) no-repeat -40rem 70rem, url(../img/mountain.png) no-repeat 0 40rem, url(../img/topshadow.png) no-repeat 0 0, url(../img/clouds.png) no-repeat 0 -40rem, #0b1d26; }
-
-  #scrollToTop {
+  .container footer #scrollToTop {
     right: 1rem;
     bottom: 12rem; } }
 
