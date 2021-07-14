@@ -62,9 +62,10 @@ body {
 }
 
 .profile:hover {
-  color: #fbd784;
+  /*  color: #fbd784; */
   transition: 0.5s;
   cursor: pointer;
+  text-decoration: underline;
 }
 
 .read-more p:hover,
@@ -79,12 +80,40 @@ header {
   justify-content: space-between;
   margin: 6.4rem 8rem 0 8rem;
   color: white;
+  .hamburger-menu {
+    display: flex;
+  }
+  .profile {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    .account {
+      font-family: Gilroy;
+      font-size: 17px;
+      line-height: 21px;
+      font-weight: bold;
+    }
+    .fa-user-circle {
+      font-size: 2rem;
+    }
+  }
+  .profile:hover {
+    color: #fbd784;
+    transition: 0.5s;
+    cursor: pointer;
+  }
   .logo {
     font-family: "Chronicle Display Semibold";
     font-size: 3.2rem;
     line-height: 3.8rem;
     letter-spacing: 0.01em;
   }
+  /* скрываем чекбокс */
+  #menu__toggle {
+    opacity: 0;
+  }
+
   .nav {
     display: flex;
     justify-content: space-between;
@@ -98,22 +127,7 @@ header {
       font-weight: bold;
       font-size: 18px;
       line-height: 22px;
-    }
-  }
-  .profile {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 9.8rem;
-    align-items: center;
-    .account {
-      font-family: Gilroy;
-      font-size: 17px;
-      line-height: 21px;
-      font-weight: bold;
-    }
-    .fa-user-circle {
-      font-size: 2rem;
+      display: block;
     }
   }
 }
@@ -249,6 +263,7 @@ main {
       align-items: center;
       height: 72rem;
       order: 1;
+      margin-right: 26rem;
       .number {
         position: absolute;
         top: 3.8rem;
@@ -261,7 +276,7 @@ main {
       }
       .topic {
         width: 63.2rem;
-        height: 43.9rem;
+        min-height: 43.9rem;
         color: white;
         .topic-title {
           display: flex;
@@ -335,19 +350,20 @@ main {
       width: 89.6rem;
       height: 72rem;
       order: 2;
+      padding-left: 23rem;
       .number-two {
         position: absolute;
         top: 3.8rem;
-        left: 0;
         font-weight: bold;
         font-size: 240px;
         line-height: 240px;
         opacity: 0.1;
         color: #ffffff;
+        left: 200px;
       }
       .topic {
         width: 63.2rem;
-        height: 43.9rem;
+        min-height: 43.9rem;
         color: white;
         .topic-title-two {
           display: flex;
@@ -464,6 +480,7 @@ main {
           color: white;
           list-style-type: none;
           margin-top: 1.6rem;
+          font-size: 18px;
         }
         li:hover {
           color: #fbd784;
@@ -503,7 +520,7 @@ main {
 //media requests
 @media all and (max-width: 1680px) {
   .container footer {
-    justify-content: space-evenly;
+    justify-content: space-between;
   }
   .topic-two-image img,
   .topic-one-image img,
@@ -528,6 +545,7 @@ main {
         align-self: center;
         height: 0;
         height: 53rem;
+        margin-right: 0rem;
         .number {
           font-size: 140px;
         }
@@ -548,6 +566,7 @@ main {
         align-self: center;
         height: 53rem;
         order: 1;
+        padding-left: 0rem;
         .number-two {
           left: 13rem;
           font-size: 140px;
@@ -560,6 +579,7 @@ main {
       }
     }
     footer {
+      justify-content: space-evenly;
       margin-bottom: 5rem;
       margin-top: 5rem;
       .links {
@@ -655,19 +675,94 @@ main {
 
   header {
     justify-content: center;
-    .nav {
-      margin-left: 16rem;
-      flex-direction: column;
-      align-items: flex-start;
+
+    #menu__toggle:checked ~ .menu__btn > span {
+      transform: rotate(45deg);
     }
-    .profile {
-      align-items: flex-start;
-      width: 3rem;
-      .account {
-        display: none;
+    #menu__toggle:checked ~ .menu__btn > span::before {
+      top: 0;
+      transform: rotate(0);
+    }
+    #menu__toggle:checked ~ .menu__btn > span::after {
+      top: 0;
+      transform: rotate(90deg);
+    }
+    #menu__toggle:checked ~ .nav {
+      visibility: visible;
+      top: 0;
+      left: 0;
+    }
+    .menu__btn {
+      display: flex; /* используем flex для центрирования содержимого */
+      align-items: center; /* центрируем содержимое кнопки */
+      position: fixed;
+      top: 7rem;
+      right: 4rem;
+      width: 26px;
+      height: 26px;
+      cursor: pointer;
+      z-index: 5;
+    }
+    /* добавляем "гамбургер" */
+    .menu__btn > span,
+    .menu__btn > span::before,
+    .menu__btn > span::after {
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      background-color: #ffffff;
+      transition-duration: 0.25s;
+    }
+    .menu__btn > span::before {
+      content: "";
+      top: -8px;
+    }
+    .menu__btn > span::after {
+      content: "";
+      top: 8px;
+    }
+    .nav {
+      transition-duration: 0.25s;
+    }
+    .nav li {
+      transition-duration: 0.25s;
+      font-size: 30px;
+      line-height: 100%;
+    }
+    .nav {
+      display: block;
+      position: fixed;
+      visibility: hidden;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 180px 0;
+      list-style: none;
+      text-align: center;
+      background-color: #c0c0c0d8;
+      box-shadow: 1px 0px 6px rgba(0, 0, 0, 0.2);
+      color: black;
+      li {
+        font-size: 50px;
+        line-height: 150%;
+        a {
+          color: black;
+        }
+        a:hover {
+          text-decoration: underline;
+          color: #fbd784;
+        }
       }
-      .fa-user-circle:before {
-        font-size: 2.5rem;
+    }
+
+    .profile {
+      justify-content: center;
+      .fa-user-circle:before,
+      .account {
+        font-size: 50px;
       }
     }
   }
@@ -722,15 +817,13 @@ main {
   }
 
   header {
+    margin: 6.4rem 8rem 0 2rem;
+    .nav li{
+      margin-right: 0rem;
+    }
     justify-content: space-evenly;
     .logo {
-      font-size: 20px;
-    }
-    .nav {
-      margin-left: 6rem;
-      li {
-        font-size: 15px;
-      }
+      font-size: 40px;
     }
   }
 
@@ -791,6 +884,10 @@ main {
       }
     }
     footer {
+      padding: 0 1.5rem 0 1.5rem;
+      .footer-copyright {
+        font-size: 15px;
+      }
       .links {
         flex-direction: column;
         align-self: center;
@@ -804,6 +901,7 @@ main {
             font-size: 15px;
           }
         }
+
         .more {
           order: 2;
           text-align: center;

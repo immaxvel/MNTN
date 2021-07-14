@@ -17,14 +17,22 @@
   <body id="body">
     <header id="header">
       <div class="logo">MNTM</div>
-      <ul class="nav">
-        <li><a href="#">Equipment</a></li>
-        <li><a href="#">About us</a></li>
-        <li><a href="#">Blog</a></li>
-      </ul>
-      <div class="profile">
-        <div class="ava"><i class="far fa-user-circle"></i></div>
-        <p class="account">Account</p>
+      <div class="hamburger-menu">
+        <input id="menu__toggle" type="checkbox" />
+        <label class="menu__btn" for="menu__toggle">
+          <span></span>
+        </label>
+        <ul class="nav">
+          <li><a href="#">Equipment</a></li>
+          <li><a href="#">About us</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><div class="profile">
+            <div class="ava"><i class="far fa-user-circle"></i></div>
+            <p class="account">Account</p>
+          </div></li>
+          
+        </ul>
+        
       </div>
     </header>
 
@@ -32,19 +40,23 @@
       <div class="social">
         <p class="follow">Follow Us</p>
         <div class="social-icons">
-          <a href="https://www.instagram.com/?hl=ru" target="_blank"><i class="fab fa-instagram"></i></a>
-          <a href="https://twitter.com/?lang=ru" target="_blank"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.instagram.com/?hl=ru" target="_blank"
+            ><i class="fab fa-instagram"></i
+          ></a>
+          <a href="https://twitter.com/?lang=ru" target="_blank"
+            ><i class="fab fa-twitter"></i
+          ></a>
         </div>
       </div>
       <div class="main">
         <div class="main-title">
           <div class="dash"></div>
-          <p class="guide">A Hiking guide</p>
+          <h2 class="guide">A Hiking guide</h2>
         </div>
-        <p class="title">
+        <h1 class="title">
           Be prepared for the<br />
           Mountains and beyond!
-        </p>
+        </h1>
         <div class="scroll">
           <a href="#footer">Scroll down</a>
           <i class="fas fa-long-arrow-alt-down"></i>
@@ -68,16 +80,18 @@
           <div class="topic">
             <div class="topic-title">
               <div class="dash"></div>
-              <p class="get-started">Get Started</p>
+              <h3 class="get-started">Get Started</h3>
             </div>
-            <div class="topic-main">What level of hiker are you?</div>
+            <h2 class="topic-main">What level of hiker are you?</h2>
             <div class="topic-info">
-              Determining what level of hiker you are can be an important tool
-              when planning future hikes. This hiking level guide will help you
-              plan hikes according to different hike ratings set by various
-              websites like All Trails and Modern Hiker. What type of hiker are
-              you – novice, moderate, advanced moderate, expert, or expert
-              backpacker?
+              <p>
+                Determining what level of hiker you are can be an important tool
+                when planning future hikes. This hiking level guide will help
+                you plan hikes according to different hike ratings set by
+                various websites like All Trails and Modern Hiker. What type of
+                hiker are you – novice, moderate, advanced moderate, expert, or
+                expert backpacker?
+              </p>
             </div>
             <div class="read-more">
               <p>read more</p>
@@ -97,7 +111,7 @@
               <div class="dash-two"></div>
               <p class="get-started-two">Hiking Essentials</p>
             </div>
-            <div class="topic-main-two">Picking the right Hiking Gear!</div>
+            <h2 class="topic-main-two">Picking the right Hiking Gear!</h2>
             <div class="topic-info-two">
               The nice thing about beginning hiking is that you don’t really
               need any special gear, you can probably get away with things you
@@ -123,7 +137,7 @@
               <div class="dash"></div>
               <p class="get-started">Where you go is the key</p>
             </div>
-            <div class="topic-main">Understand Your Map & Timing</div>
+            <h2 class="topic-main">Understand Your Map & Timing</h2>
             <div class="topic-info">
               To start, print out the hiking guide and map. If it’s raining,
               throw them in a Zip-Lock bag. Read over the guide, study the map,
@@ -149,10 +163,14 @@
           <div class="footer-social">
             <p class="footer-follow">Follow Us</p>
             <div class="footer-icons">
-              <a href="https://www.instagram.com/?hl=ru" target="_blank"><i class="fab fa-instagram"></i></a>
-              <a href="https://twitter.com/?lang=ru" target="_blank"><i class="fab fa-twitter"></i></a>
+              <a href="https://www.instagram.com/?hl=ru" target="_blank"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="https://twitter.com/?lang=ru" target="_blank"
+                ><i class="fab fa-twitter"></i
+              ></a>
             </div>
-            </div>
+          </div>
           <div class="footer-copyright">
             Copyright 2019 MNTN, Inc. Terms & Privacy
           </div>
@@ -173,13 +191,12 @@
             <a href="#"><li>Press</li></a>
           </ul>
         </div>
-        <div id="scrollToTop" onclick="goUp();"><i class="fas fa-long-arrow-alt-up"></i>
-
+        <div id="scrollToTop" onclick="goUp();">
+          <i class="fas fa-long-arrow-alt-up"></i>
         </div>
       </footer>
     </div>
 
     <script src="./script/script.js"></script>
-    
   </body>
 </html>
