@@ -1,4 +1,3 @@
-@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -47,7 +46,6 @@ body {
     transition: 0.5s; }
 
 .profile:hover {
-  /*  color: #fbd784; */
   transition: 0.5s;
   cursor: pointer;
   text-decoration: underline; }
@@ -64,7 +62,7 @@ header {
   justify-content: space-between;
   margin: 6.4rem 8rem 0 8rem;
   color: #fff;
-  /* скрываем чекбокс */ }
+  /* hide checkbox */ }
   header .hamburger-menu {
     display: flex;
     overflow-y: visible; }
@@ -539,7 +537,7 @@ main {
     padding: 6.4rem 8rem 0 8rem;
     margin: auto;
     z-index: 5;
-    /* добавляем "гамбургер" */ }
+    /* add burger" */ }
     header #menu__toggle:checked ~ .menu__btn > span {
       transform: rotate(45deg); }
     header #menu__toggle:checked ~ .menu__btn > span::before {
@@ -554,9 +552,9 @@ main {
       left: 0; }
     header .menu__btn {
       display: flex;
-      /* используем flex для центрирования содержимого */
+      /* use flex to center content */
       align-items: center;
-      /* центрируем содержимое кнопки */
+      /* center buttn content */
       position: fixed;
       top: 7rem;
       right: 4rem;

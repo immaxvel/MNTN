@@ -78,7 +78,6 @@ body {
 }
 
 .profile:hover {
-  /*  color: #fbd784; */
   transition: 0.5s;
   cursor: pointer;
   text-decoration: underline;
@@ -126,7 +125,7 @@ header {
     line-height: 3.8rem;
     letter-spacing: 0.01em;
   }
-  /* скрываем чекбокс */
+  /* hide checkbox */
   #menu__toggle {
     opacity: 0;
   }
@@ -710,8 +709,8 @@ main {
       left: 0;
     }
     .menu__btn {
-      display: flex; /* используем flex для центрирования содержимого */
-      align-items: center; /* центрируем содержимое кнопки */
+      display: flex; /* use flex to center content */
+      align-items: center; /* center buttn content */
       position: fixed;
       top: 7rem;
       right: 4rem;
@@ -720,7 +719,7 @@ main {
       cursor: pointer;
       z-index: 5;
     }
-    /* добавляем "гамбургер" */
+    /* add burger" */
     .menu__btn > span,
     .menu__btn > span::before,
     .menu__btn > span::after {
