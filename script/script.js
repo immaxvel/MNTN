@@ -1,3 +1,24 @@
+const isSafari = navigator.userAgent.indexOf("Safari") !== -1;
+const isIphone = navigator.userAgent.indexOf("iPhone") !== -1;
+const isMobileIosSafari = isSafari && isIphone;
+const checkbox = document.getElementById("menu__toggle");
+function checkFluency() {
+  if (checkbox.checked) {
+    // Disable scrolling.
+    document.ontouchmove = function (e) {
+      e.preventDefault();
+    };
+    document.body.style["overflow-y"] = "hidden";
+  } else {
+    // Enable scrolling.
+    document.ontouchmove = function (e) {
+      return true;
+    };
+    document.body.style["overflow-y"] = "visible";
+  }
+}
+
+
 // group all anchors, set animation time and count frames
 const anchors = [].slice.call(document.querySelectorAll('a[href*="#"]'));
 const animationTime = 1000;
@@ -19,7 +40,7 @@ anchors.forEach((item) => {
       // how much scroll for one tact
       const scrollBy = coordY / framesCount;
 
-      // if px scroll for 1 tact > length to element 
+      // if px scroll for 1 tact > length to element
       // and bottom do not reached
       if (
         scrollBy > window.pageYOffset - coordY &&
@@ -32,7 +53,7 @@ anchors.forEach((item) => {
         window.scrollTo(0, coordY);
         clearInterval(scroller);
       }
-      //time of interval 
+      //time of interval
     }, animationTime / framesCount);
   });
 });
@@ -59,20 +80,3 @@ let goUp = () => {
     clearTimeout(timeOut);
   }
 };
-
-function checkFluency(){
-  let checkbox = document.getElementById('menu__toggle');
-if (checkbox.checked){
-  // Disable scrolling.
-  document.ontouchmove = function (e) {
-    e.preventDefault();
-  }
-  document.body.style['overflow-y'] = 'hidden';
-}else{
-  // Enable scrolling.
-  document.ontouchmove = function (e) {
-    return true;
-  }
-  document.body.style['overflow-y'] = 'visible';
-}
-}
