@@ -3,12 +3,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box; }
-  * a {
-    text-decoration: none;
-    color: white; }
-  * a:hover {
-    color: #fbd784;
-    transition: 0.5s; }
+
+header .nav li, main .social .follow, main .main .guide, .container .topic-one .topic-one-text .topic .topic-title .get-started, .container .topic-one .topic-one-text .topic .read-more p, .container .topic-two .topic-two-text .topic .topic-title-two .get-started-two, .container .topic-two .topic-two-text .topic .read-more-two p {
+  font-family: Gilroy;
+  font-size: 18px;
+  line-height: 22px; }
 
 @font-face {
   font-family: "Chronicle Display Roman";
@@ -40,6 +39,12 @@ html {
 body {
   height: 446rem;
   background: url(../img/botshadow.png) no-repeat 0 115rem, url(../img/human.png) no-repeat 0 70rem, url(../img/mountain.png) no-repeat 0 40rem, url(../img/topshadow.png) no-repeat 0 0, url(../img/clouds.png) no-repeat 0 -40rem, #0b1d26; }
+  body a {
+    text-decoration: none;
+    color: #fff; }
+  body a:hover {
+    color: #fbd784;
+    transition: 0.5s; }
 
 .profile:hover {
   /*  color: #fbd784; */
@@ -49,7 +54,7 @@ body {
 
 .read-more p:hover,
 .read-more-two p:hover {
-  color: white;
+  color: #fff;
   transition: 0.5s;
   cursor: pointer; }
 
@@ -58,10 +63,11 @@ header {
   flex-direction: row;
   justify-content: space-between;
   margin: 6.4rem 8rem 0 8rem;
-  color: white;
+  color: #fff;
   /* скрываем чекбокс */ }
   header .hamburger-menu {
-    display: flex; }
+    display: flex;
+    overflow-y: visible; }
   header .profile {
     display: flex;
     flex-direction: row;
@@ -93,11 +99,8 @@ header {
     header .nav li {
       list-style-type: none;
       margin-right: 4rem;
-      font-family: Gilroy;
       font-style: normal;
       font-weight: bold;
-      font-size: 18px;
-      line-height: 22px;
       display: block; }
 
 main {
@@ -111,14 +114,12 @@ main {
     justify-content: space-around;
     height: 17.3rem;
     width: 2.4rem;
-    color: white;
+    color: #fff;
     text-align: center;
     margin-left: -3rem;
     align-self: center; }
     main .social .follow {
       transform: rotate(90deg);
-      font-size: 18px;
-      line-height: 22px;
       margin-right: 2rem;
       width: 8rem; }
     main .social .social-icons {
@@ -141,21 +142,21 @@ main {
     main .slider div {
       height: 6rem;
       border-right: 1px solid white;
-      color: white;
+      color: #fff;
       padding-top: 25%;
       transition: 0.5s; }
       main .slider div a {
         text-decoration: none;
-        color: white; }
+        color: #fff; }
     main .slider div:hover {
       color: #fbd784;
       transition: 0.5s;
       background-color: rgba(255, 255, 255, 0.151);
       transition: 0.5s;
-      border-right: 4px solid white;
+      border-right: 4px solid #fff;
       transition: 0.1s; }
   main .main {
-    color: white; }
+    color: #fff; }
     main .main .main-title {
       display: flex;
       flex-direction: row;
@@ -175,8 +176,6 @@ main {
     main .main .guide {
       color: #fbd784;
       font-weight: 800;
-      font-size: 18px;
-      line-height: 22px;
       letter-spacing: 6px; }
     main .main .scroll {
       display: flex;
@@ -190,7 +189,7 @@ main {
       cursor: pointer; }
       main .main .scroll a {
         margin-right: 2rem;
-        color: white; }
+        color: #fff; }
       main .main .scroll i {
         align-self: center;
         font-size: 1.7rem; }
@@ -222,11 +221,11 @@ main {
         font-size: 240px;
         line-height: 240px;
         opacity: 0.1;
-        color: #ffffff; }
+        color: #fff; }
       .container .topic-one .topic-one-text .topic {
         width: 63.2rem;
         min-height: 43.9rem;
-        color: white; }
+        color: #fff; }
         .container .topic-one .topic-one-text .topic .topic-title {
           display: flex;
           flex-direction: row;
@@ -240,8 +239,6 @@ main {
             margin-right: 3.2rem; }
           .container .topic-one .topic-one-text .topic .topic-title .get-started {
             font-weight: 800;
-            font-size: 18px;
-            line-height: 22px;
             letter-spacing: 6px;
             color: #fbd784; }
         .container .topic-one .topic-one-text .topic .topic-main {
@@ -250,7 +247,7 @@ main {
           font-weight: 600;
           font-size: 64px;
           line-height: 77px;
-          color: #ffffff;
+          color: #fff;
           margin-bottom: 2.7rem; }
         .container .topic-one .topic-one-text .topic .topic-info {
           font-family: Gilroy;
@@ -268,8 +265,6 @@ main {
           margin-top: 2.8rem; }
           .container .topic-one .topic-one-text .topic .read-more p {
             font-family: Gilroy;
-            font-size: 18px;
-            line-height: 22px;
             margin-right: 1.6rem; }
     .container .topic-one .topic-one-image {
       order: 2;
@@ -296,12 +291,12 @@ main {
         font-size: 240px;
         line-height: 240px;
         opacity: 0.1;
-        color: #ffffff;
+        color: #fff;
         left: 200px; }
       .container .topic-two .topic-two-text .topic {
         width: 63.2rem;
         min-height: 43.9rem;
-        color: white; }
+        color: #fff; }
         .container .topic-two .topic-two-text .topic .topic-title-two {
           display: flex;
           flex-direction: row;
@@ -315,8 +310,6 @@ main {
             margin-right: 3.2rem; }
           .container .topic-two .topic-two-text .topic .topic-title-two .get-started-two {
             font-weight: 800;
-            font-size: 18px;
-            line-height: 22px;
             letter-spacing: 6px;
             color: #fbd784; }
         .container .topic-two .topic-two-text .topic .topic-main-two {
@@ -325,7 +318,7 @@ main {
           font-weight: 600;
           font-size: 64px;
           line-height: 77px;
-          color: #ffffff;
+          color: #fff;
           margin-bottom: 2.7rem; }
         .container .topic-two .topic-two-text .topic .topic-info-two {
           font-family: Gilroy;
@@ -343,8 +336,6 @@ main {
           margin-top: 2.8rem; }
           .container .topic-two .topic-two-text .topic .read-more-two p {
             font-family: Gilroy;
-            font-size: 18px;
-            line-height: 22px;
             margin-right: 1.6rem; }
     .container .topic-two .topic-two-image {
       order: 1;
@@ -353,7 +344,7 @@ main {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    color: white; }
+    color: #fff; }
     .container footer .footer-social {
       display: none;
       justify-content: start;
@@ -394,7 +385,7 @@ main {
         line-height: 32px;
         color: #fbd784; }
         .container footer .links ul li {
-          color: white;
+          color: #fff;
           list-style-type: none;
           margin-top: 1.6rem;
           font-size: 18px; }
@@ -416,7 +407,7 @@ main {
       transition: all 0.5s ease-in;
       width: 5rem;
       height: 5rem;
-      color: white;
+      color: #fff;
       background-color: #fff;
       border-radius: 50%; }
       .container footer #scrollToTop .fa-long-arrow-alt-up {
@@ -521,7 +512,7 @@ main {
       main .slider .title-two,
       main .slider .title-three {
         width: 5rem;
-        border-bottom: 2px solid white;
+        border-bottom: 2px solid #fff;
         border-right: none;
         height: 4rem;
         padding-top: 10%; }
@@ -532,7 +523,7 @@ main {
         transition: 0.5s;
         border-right: none;
         transition: 0.1s;
-        border-bottom: 4px solid white; } }
+        border-bottom: 4px solid #fff; } }
 @media all and (max-width: 940px) {
   body {
     height: 446rem;
@@ -540,6 +531,14 @@ main {
 
   header {
     justify-content: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: #25373e;
+    width: 100%;
+    padding: 6.4rem 8rem 0 8rem;
+    margin: auto;
+    z-index: 5;
     /* добавляем "гамбургер" */ }
     header #menu__toggle:checked ~ .menu__btn > span {
       transform: rotate(45deg); }
@@ -572,7 +571,7 @@ main {
       position: absolute;
       width: 100%;
       height: 2px;
-      background-color: #ffffff;
+      background-color: #fff;
       transition-duration: 0.25s; }
     header .menu__btn > span::before {
       content: "";
@@ -600,12 +599,12 @@ main {
       text-align: center;
       background-color: #c0c0c0d8;
       box-shadow: 1px 0px 6px rgba(0, 0, 0, 0.2);
-      color: black; }
+      color: #000; }
       header .nav li {
         font-size: 50px;
         line-height: 150%; }
         header .nav li a {
-          color: black; }
+          color: #000; }
         header .nav li a:hover {
           text-decoration: underline;
           color: #fbd784; }
@@ -645,7 +644,6 @@ main {
     background: url(../img/botshadow.png) no-repeat 0 115rem, url(../img/human.png) no-repeat -40rem 70rem, url(../img/mountain.png) no-repeat 0 40rem, url(../img/topshadow.png) no-repeat 0 0, url(../img/clouds.png) no-repeat 0 -40rem, #0b1d26; }
 
   header {
-    margin: 6.4rem 8rem 0 2rem;
     justify-content: space-evenly; }
     header .nav li {
       margin-right: 0rem; }

@@ -60,5 +60,13 @@ let goUp = () => {
   }
 };
 
-
-
+function checkFluency(){
+  let checkbox = document.getElementById('menu__toggle');
+  let burger = document.getElementById('burger')
+if (checkbox.checked){
+  document.body.style['overflow-y'] = 'hidden';
+  document.burger.style['overflow-y'] = 'visible';
+}else{
+  document.body.style['overflow-y'] = 'visible';
+}
+}

@@ -1,17 +1,24 @@
+//! NORMALIZE
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  a {
-    text-decoration: none;
-    color: white;
-  }
-  a:hover {
-    color: #fbd784;
-    transition: 0.5s;
-  }
+  
 }
 
+//! COLORS
+$colorWhite: #fff;
+$colorLightOrange: #fbd784;
+$colorDarkBlue: #0b1d26;
+$colorBlack: #000;
+
+//! FONTS
+%gilroy {
+  font-family: Gilroy;
+  font-size: 18px;
+  line-height: 22px;
+}
+  
 @font-face {
   font-family: "Chronicle Display Roman";
   font-style: normal;
@@ -47,6 +54,7 @@
   font-weight: normal;
   font-style: normal;
 }
+
 html {
   font-size: 10px;
   font-family: Gilroy;
@@ -58,7 +66,15 @@ body {
     url(../img/human.png) no-repeat 0 70rem,
     url(../img/mountain.png) no-repeat 0 40rem,
     url(../img/topshadow.png) no-repeat 0 0,
-    url(../img/clouds.png) no-repeat 0 -40rem, #0b1d26;
+    url(../img/clouds.png) no-repeat 0 -40rem, $colorDarkBlue;
+    a {
+      text-decoration: none;
+      color: $colorWhite;
+    }
+    a:hover {
+      color: $colorLightOrange;
+      transition: 0.5s;
+    }
 }
 
 .profile:hover {
@@ -70,7 +86,7 @@ body {
 
 .read-more p:hover,
 .read-more-two p:hover {
-  color: white;
+  color: $colorWhite;
   transition: 0.5s;
   cursor: pointer;
 }
@@ -79,9 +95,10 @@ header {
   flex-direction: row;
   justify-content: space-between;
   margin: 6.4rem 8rem 0 8rem;
-  color: white;
+  color: $colorWhite;
   .hamburger-menu {
     display: flex;
+    overflow-y: visible;
   }
   .profile {
     display: flex;
@@ -99,7 +116,7 @@ header {
     }
   }
   .profile:hover {
-    color: #fbd784;
+    color: $colorLightOrange;
     transition: 0.5s;
     cursor: pointer;
   }
@@ -122,11 +139,9 @@ header {
     li {
       list-style-type: none;
       margin-right: 4rem;
-      font-family: Gilroy;
       font-style: normal;
       font-weight: bold;
-      font-size: 18px;
-      line-height: 22px;
+      @extend %gilroy;
       display: block;
     }
   }
@@ -143,14 +158,13 @@ main {
     justify-content: space-around;
     height: 17.3rem;
     width: 2.4rem;
-    color: white;
+    color: $colorWhite;
     text-align: center;
     margin-left: -3rem;
     align-self: center;
     .follow {
       transform: rotate(90deg);
-      font-size: 18px;
-      line-height: 22px;
+      @extend %gilroy;
       margin-right: 2rem;
       width: 8rem;
     }
@@ -177,26 +191,26 @@ main {
     div {
       height: 6rem;
       border-right: 1px solid white;
-      color: white;
+      color: $colorWhite;
       padding-top: 25%;
       transition: 0.5s;
       a {
         text-decoration: none;
-        color: white;
+        color: $colorWhite;
       }
     }
     div:hover {
-      color: #fbd784;
+      color: $colorLightOrange;
       transition: 0.5s;
       background-color: rgba(255, 255, 255, 0.151);
       transition: 0.5s;
-      border-right: 4px solid white;
+      border-right: 4px solid $colorWhite;
       transition: 0.1s;
     }
   }
 
   .main {
-    color: white;
+    color: $colorWhite;
     .main-title {
       display: flex;
       flex-direction: row;
@@ -210,17 +224,16 @@ main {
       margin-top: 3.2rem;
     }
     .dash {
-      background-color: #fbd784;
+      background-color: $colorLightOrange;
       width: 7.2rem;
       height: 0.2rem;
       align-self: center;
       margin-right: 3.2rem;
     }
     .guide {
-      color: #fbd784;
+      color: $colorLightOrange;
       font-weight: 800;
-      font-size: 18px;
-      line-height: 22px;
+      @extend %gilroy;
       letter-spacing: 6px;
     }
     .scroll {
@@ -229,13 +242,13 @@ main {
       font-size: 18px;
       width: 15rem;
       height: 2rem;
-      background-color: #fbd784;
+      background-color: $colorLightOrange;
       border-radius: 2rem;
       padding-left: 2rem;
       cursor: pointer;
       a {
         margin-right: 2rem;
-        color: white;
+        color: $colorWhite;
       }
       i {
         align-self: center;
@@ -272,19 +285,19 @@ main {
         font-size: 240px;
         line-height: 240px;
         opacity: 0.1;
-        color: #ffffff;
+        color: $colorWhite;
       }
       .topic {
         width: 63.2rem;
         min-height: 43.9rem;
-        color: white;
+        color: $colorWhite;
         .topic-title {
           display: flex;
           flex-direction: row;
           justify-content: start;
           margin-bottom: 2.7rem;
           .dash {
-            background-color: #fbd784;
+            background-color: $colorLightOrange;
             width: 7.2rem;
             height: 0.2rem;
             align-self: center;
@@ -292,10 +305,9 @@ main {
           }
           .get-started {
             font-weight: 800;
-            font-size: 18px;
-            line-height: 22px;
+            @extend %gilroy;
             letter-spacing: 6px;
-            color: #fbd784;
+            color: $colorLightOrange;
           }
         }
         .topic-main {
@@ -304,7 +316,7 @@ main {
           font-weight: 600;
           font-size: 64px;
           line-height: 77px;
-          color: #ffffff;
+          color: $colorWhite;
           margin-bottom: 2.7rem;
         }
         .topic-info {
@@ -318,14 +330,13 @@ main {
         .read-more {
           display: flex;
           flex-direction: row;
-          color: #fbd784;
+          color: $colorLightOrange;
           align-items: center;
           margin-right: 1rem;
           margin-top: 2.8rem;
           p {
             font-family: Gilroy;
-            font-size: 18px;
-            line-height: 22px;
+            @extend %gilroy;
             margin-right: 1.6rem;
           }
         }
@@ -358,20 +369,20 @@ main {
         font-size: 240px;
         line-height: 240px;
         opacity: 0.1;
-        color: #ffffff;
+        color: $colorWhite;
         left: 200px;
       }
       .topic {
         width: 63.2rem;
         min-height: 43.9rem;
-        color: white;
+        color: $colorWhite;
         .topic-title-two {
           display: flex;
           flex-direction: row;
           justify-content: start;
           margin-bottom: 2.7rem;
           .dash-two {
-            background-color: #fbd784;
+            background-color: $colorLightOrange;
             width: 7.2rem;
             height: 0.2rem;
             align-self: center;
@@ -379,10 +390,9 @@ main {
           }
           .get-started-two {
             font-weight: 800;
-            font-size: 18px;
-            line-height: 22px;
+            @extend %gilroy;
             letter-spacing: 6px;
-            color: #fbd784;
+            color: $colorLightOrange;
           }
         }
         .topic-main-two {
@@ -391,7 +401,7 @@ main {
           font-weight: 600;
           font-size: 64px;
           line-height: 77px;
-          color: #ffffff;
+          color: $colorWhite;
           margin-bottom: 2.7rem;
         }
         .topic-info-two {
@@ -405,14 +415,13 @@ main {
         .read-more-two {
           display: flex;
           flex-direction: row;
-          color: #fbd784;
+          color: $colorLightOrange;
           align-items: center;
           margin-right: 1rem;
           margin-top: 2.8rem;
           p {
             font-family: Gilroy;
-            font-size: 18px;
-            line-height: 22px;
+            @extend %gilroy;
             margin-right: 1.6rem;
           }
         }
@@ -428,7 +437,7 @@ main {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    color: white;
+    color: $colorWhite;
     .footer-social {
       display: none;
       justify-content: start;
@@ -475,15 +484,15 @@ main {
         font-weight: bold;
         font-size: 24px;
         line-height: 32px;
-        color: #fbd784;
+        color: $colorLightOrange;
         li {
-          color: white;
+          color: $colorWhite;
           list-style-type: none;
           margin-top: 1.6rem;
           font-size: 18px;
         }
         li:hover {
-          color: #fbd784;
+          color: $colorLightOrange;
           transition: 0.5s;
           cursor: pointer;
         }
@@ -504,12 +513,12 @@ main {
       transition: all 0.5s ease-in;
       width: 5rem;
       height: 5rem;
-      color: white;
-      background-color: #fff;
+      color: $colorWhite;
+      background-color: $colorWhite;
       border-radius: 50%;
       .fa-long-arrow-alt-up {
         align-self: center;
-        color: #fbd784;
+        color: $colorLightOrange;
         text-align: center;
         font-size: 3rem;
       }
@@ -646,23 +655,24 @@ main {
       .title-two,
       .title-three {
         width: 5rem;
-        border-bottom: 2px solid white;
+        border-bottom: 2px solid $colorWhite;
         border-right: none;
         height: 4rem;
         padding-top: 10%;
       }
       div:hover {
-        color: #fbd784;
+        color: $colorLightOrange;
         transition: 0.5s;
         background-color: rgba(255, 255, 255, 0.151);
         transition: 0.5s;
         border-right: none;
         transition: 0.1s;
-        border-bottom: 4px solid white;
+        border-bottom: 4px solid $colorWhite;
       }
     }
   }
 }
+
 @media all and (max-width: 940px) {
   body {
     height: 446rem;
@@ -670,12 +680,19 @@ main {
       url(../img/human.png) no-repeat -30rem 70rem,
       url(../img/mountain.png) no-repeat 0 40rem,
       url(../img/topshadow.png) no-repeat 0 0,
-      url(../img/clouds.png) no-repeat 0 -40rem, #0b1d26;
+      url(../img/clouds.png) no-repeat 0 -40rem, $colorDarkBlue;
   }
 
   header {
     justify-content: center;
-
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: #25373e;
+    width: 100%;
+    padding: 6.4rem 8rem 0 8rem;
+    margin: auto;
+    z-index: 5;
     #menu__toggle:checked ~ .menu__btn > span {
       transform: rotate(45deg);
     }
@@ -711,7 +728,7 @@ main {
       position: absolute;
       width: 100%;
       height: 2px;
-      background-color: #ffffff;
+      background-color: $colorWhite;
       transition-duration: 0.25s;
     }
     .menu__btn > span::before {
@@ -744,16 +761,16 @@ main {
       text-align: center;
       background-color: #c0c0c0d8;
       box-shadow: 1px 0px 6px rgba(0, 0, 0, 0.2);
-      color: black;
+      color: $colorBlack;
       li {
         font-size: 50px;
         line-height: 150%;
         a {
-          color: black;
+          color: $colorBlack;
         }
         a:hover {
           text-decoration: underline;
-          color: #fbd784;
+          color: $colorLightOrange;
         }
       }
     }
@@ -813,12 +830,11 @@ main {
       url(../img/human.png) no-repeat -40rem 70rem,
       url(../img/mountain.png) no-repeat 0 40rem,
       url(../img/topshadow.png) no-repeat 0 0,
-      url(../img/clouds.png) no-repeat 0 -40rem, #0b1d26;
+      url(../img/clouds.png) no-repeat 0 -40rem, $colorDarkBlue;
   }
 
   header {
-    margin: 6.4rem 8rem 0 2rem;
-    .nav li{
+    .nav li {
       margin-right: 0rem;
     }
     justify-content: space-evenly;
