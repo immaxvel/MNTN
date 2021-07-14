@@ -64,8 +64,7 @@ header {
   color: #fff;
   /* hide checkbox */ }
   header .hamburger-menu {
-    display: flex;
-    overflow-y: visible; }
+    display: flex; }
   header .profile {
     display: flex;
     flex-direction: row;
