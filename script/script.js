@@ -2,22 +2,33 @@ const isSafari = navigator.userAgent.indexOf("Safari") !== -1;
 const isIphone = navigator.userAgent.indexOf("iPhone") !== -1;
 const isMobileIosSafari = isSafari && isIphone;
 const checkbox = document.getElementById("menu__toggle");
+function lockScroll () {
+  document.body.style.position = 'fixed';
+  document.body.style.top = `102px`;
+  document.body.style.left = '0';
+  document.body.style.right = '0';
+};
+function unlockScroll () {
+  const scrollY = this.body.style.top;
+  document.body.style.position = '';
+  document.body.style.top = '';
+  document.body.style.left = '';
+  document.body.style.right = '';
+  window.scrollTo(0, parseInt(scrollY || '0') * -1);
+};
+
 function checkFluency() {
-  if (checkbox.checked) {
-    // Disable scrolling.
-    document.ontouchmove = function (e) {
-      e.preventDefault();
-    };
+  if (!checkbox.checked) {
+    lockScroll ();
     document.body.style["overflow-y"] = "hidden";
   } else {
-    // Enable scrolling.
-    document.ontouchmove = function (e) {
-      return true;
-    };
+    unlockScroll ();
     document.body.style["overflow-y"] = "visible";
-  }
-}
+}};
 
+const menuButton = document.getElementsByClassName("menu__btn")[0];
+let touchEvent = "ontouchstart" in window ? "touchstart" : "click";
+menuButton.addEventListener(touchEvent, checkFluency);
 
 // group all anchors, set animation time and count frames
 const anchors = [].slice.call(document.querySelectorAll('a[href*="#"]'));

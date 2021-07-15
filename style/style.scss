@@ -62,11 +62,11 @@ html {
 }
 body {
   height: 446rem;
-  background: url(../img/botshadow.png) no-repeat 0 115rem,
-    url(../img/human.png) no-repeat 0 70rem,
-    url(../img/mountain.png) no-repeat 0 40rem,
-    url(../img/topshadow.png) no-repeat 0 0,
-    url(../img/clouds.png) no-repeat 0 -40rem, $colorDarkBlue;
+  background: url(../img/botshadow.png)no-repeat 0 115rem,
+    url(../img/human.png)no-repeat 0 70rem,
+    url(../img/mountain.png)no-repeat 0 40rem,
+    url(../img/topshadow.png)no-repeat 0 0,
+    url(../img/clouds.png)no-repeat 0 -40rem, $colorDarkBlue;
     a {
       text-decoration: none;
       color: $colorWhite;
@@ -680,7 +680,6 @@ main {
       url(../img/topshadow.png) no-repeat 0 0,
       url(../img/clouds.png) no-repeat 0 -40rem, $colorDarkBlue;
   }
-
   header {
     justify-content: center;
     position: fixed;
